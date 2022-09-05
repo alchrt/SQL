@@ -1,2 +1,2 @@
 # SQL
-A place for all SQL projects for my portfolio
+A place for SQL projects for my portfolio
