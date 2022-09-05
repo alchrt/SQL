@@ -1,6 +1,7 @@
+
 /* SQL Data Exploration project based on Alex the Analyst's Portfolio Project series using COVID data from https://ourworldindata.org/covid-deaths */
 
--- Checking if the data imported correctly
+-- Checking if the data was imported correctly
 
 SELECT *
 FROM PortfolioProject..CovidDeaths
