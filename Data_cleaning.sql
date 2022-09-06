@@ -9,12 +9,12 @@ FROM PortfolioProject..Housing;
 -- Changing/standardizing the date format
 
 ALTER TABLE PortfolioProject..Housing
-ADD SaleDateCoverted Date;
+ADD SaleDateConverted Date;
 
 UPDATE PortfolioProject..Housing
-SET SaleDateCoverted = CONVERT(date,SaleDate);
+SET SaleDateConverted = CONVERT(date,SaleDate);
 
-SELECT SaleDateCoverted, CONVERT(date,SaleDate)
+SELECT SaleDateConverted, CONVERT(date,SaleDate)
 FROM PortfolioProject..Housing;
 
 --------------------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ WHERE a.PropertyAddress is NULL;
 -- PropertyAddress first
 
 SELECT PropertyAddress
-FROM PortfolioProject..Housing
+FROM PortfolioProject..Housing;
 
 SELECT
 SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress) - 1 ) AS Address,
