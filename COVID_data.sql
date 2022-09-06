@@ -69,7 +69,7 @@ FROM PortfolioProject..CovidDeaths
 ORDER BY 1,2;
 
 -- DATA FOR POLAND
--- Looking at the total cases vs total deaths : showing the likelihood of dying if one contracts COVID in Poland (as of August 30th, 2022)
+-- Looking at the total cases vs total deaths: showing the likelihood of dying if one contracts COVID in Poland (as of August 30th, 2022)
 
 SELECT location,
 	   date,
@@ -83,8 +83,7 @@ ORDER BY 2;
 /*
 
 Error: Operand data type nvarchar is invalid for divide operator.
-Solution: Converting into a numeric data type with CAST or CONVERT - float instead of int/bigint which don't work with the data here
-(e.g., the value '5.0' won't be converted into int/bigint and an error message appears).
+Solution: Converting into a numeric data type with CAST or CONVERT.
 
 */
 
@@ -108,6 +107,7 @@ SELECT location,
 FROM PortfolioProject..CovidDeaths
 WHERE location = 'Poland'
 ORDER BY 2;
+
 
 -- GLOBAL DATA
 -- Looking at countries with the highest infection rate compared to the population
