@@ -19,6 +19,8 @@ SELECT 'UPDATE CovidDeaths SET ' + name + ' = NULL WHERE ' + name + ' = '''';'
 FROM syscolumns
 WHERE id = object_id('CovidDeaths')
 	AND isnullable = 1;
+	
+-- Running the result of the above query, which is:
 
 UPDATE CovidDeaths SET iso_code = NULL WHERE iso_code = '';
 UPDATE CovidDeaths SET continent = NULL WHERE continent = '';
@@ -47,59 +49,13 @@ UPDATE CovidDeaths SET weekly_icu_admissions_per_million = NULL WHERE weekly_icu
 UPDATE CovidDeaths SET weekly_hosp_admissions = NULL WHERE weekly_hosp_admissions = '';
 UPDATE CovidDeaths SET weekly_hosp_admissions_per_million = NULL WHERE weekly_hosp_admissions_per_million = '';
 
+-- Same thing repeated for the CovidVacc table:
 
 SELECT 'UPDATE CovidVacc SET ' + name + ' = NULL WHERE ' + name + ' = '''';'
 FROM syscolumns
 WHERE id = object_id('CovidVacc')
 	AND isnullable = 1;
-
-UPDATE CovidVacc SET iso_code = NULL WHERE iso_code = '';
-UPDATE CovidVacc SET continent = NULL WHERE continent = '';
-UPDATE CovidVacc SET location = NULL WHERE location = '';
-UPDATE CovidVacc SET date = NULL WHERE date = '';
-UPDATE CovidVacc SET total_tests = NULL WHERE total_tests = '';
-UPDATE CovidVacc SET new_tests = NULL WHERE new_tests = '';
-UPDATE CovidVacc SET total_tests_per_thousand = NULL WHERE total_tests_per_thousand = '';
-UPDATE CovidVacc SET new_tests_per_thousand = NULL WHERE new_tests_per_thousand = '';
-UPDATE CovidVacc SET new_tests_smoothed = NULL WHERE new_tests_smoothed = '';
-UPDATE CovidVacc SET new_tests_smoothed_per_thousand = NULL WHERE new_tests_smoothed_per_thousand = '';
-UPDATE CovidVacc SET positive_rate = NULL WHERE positive_rate = '';
-UPDATE CovidVacc SET tests_per_case = NULL WHERE tests_per_case = '';
-UPDATE CovidVacc SET tests_units = NULL WHERE tests_units = '';
-UPDATE CovidVacc SET total_vaccinations = NULL WHERE total_vaccinations = '';
-UPDATE CovidVacc SET people_vaccinated = NULL WHERE people_vaccinated = '';
-UPDATE CovidVacc SET people_fully_vaccinated = NULL WHERE people_fully_vaccinated = '';
-UPDATE CovidVacc SET total_boosters = NULL WHERE total_boosters = '';
-UPDATE CovidVacc SET new_vaccinations = NULL WHERE new_vaccinations = '';
-UPDATE CovidVacc SET new_vaccinations_smoothed = NULL WHERE new_vaccinations_smoothed = '';
-UPDATE CovidVacc SET total_vaccinations_per_hundred = NULL WHERE total_vaccinations_per_hundred = '';
-UPDATE CovidVacc SET people_vaccinated_per_hundred = NULL WHERE people_vaccinated_per_hundred = '';
-UPDATE CovidVacc SET people_fully_vaccinated_per_hundred = NULL WHERE people_fully_vaccinated_per_hundred = '';
-UPDATE CovidVacc SET total_boosters_per_hundred = NULL WHERE total_boosters_per_hundred = '';
-UPDATE CovidVacc SET new_vaccinations_smoothed_per_million = NULL WHERE new_vaccinations_smoothed_per_million = '';
-UPDATE CovidVacc SET new_people_vaccinated_smoothed = NULL WHERE new_people_vaccinated_smoothed = '';
-UPDATE CovidVacc SET new_people_vaccinated_smoothed_per_hundred = NULL WHERE new_people_vaccinated_smoothed_per_hundred = '';
-UPDATE CovidVacc SET stringency_index = NULL WHERE stringency_index = '';
-UPDATE CovidVacc SET population_density = NULL WHERE population_density = '';
-UPDATE CovidVacc SET median_age = NULL WHERE median_age = '';
-UPDATE CovidVacc SET aged_65_older = NULL WHERE aged_65_older = '';
-UPDATE CovidVacc SET aged_70_older = NULL WHERE aged_70_older = '';
-UPDATE CovidVacc SET gdp_per_capita = NULL WHERE gdp_per_capita = '';
-UPDATE CovidVacc SET extreme_poverty = NULL WHERE extreme_poverty = '';
-UPDATE CovidVacc SET cardiovasc_death_rate = NULL WHERE cardiovasc_death_rate = '';
-UPDATE CovidVacc SET diabetes_prevalence = NULL WHERE diabetes_prevalence = '';
-UPDATE CovidVacc SET female_smokers = NULL WHERE female_smokers = '';
-UPDATE CovidVacc SET male_smokers = NULL WHERE male_smokers = '';
-UPDATE CovidVacc SET handwashing_facilities = NULL WHERE handwashing_facilities = '';
-UPDATE CovidVacc SET hospital_beds_per_thousand = NULL WHERE hospital_beds_per_thousand = '';
-UPDATE CovidVacc SET life_expectancy = NULL WHERE life_expectancy = '';
-UPDATE CovidVacc SET human_development_index = NULL WHERE human_development_index = '';
-UPDATE CovidVacc SET excess_mortality_cumulative_absolute = NULL WHERE excess_mortality_cumulative_absolute = '';
-UPDATE CovidVacc SET excess_mortality_cumulative = NULL WHERE excess_mortality_cumulative = '';
-UPDATE CovidVacc SET excess_mortality = NULL WHERE excess_mortality = '';
-UPDATE CovidVacc SET excess_mortality_cumulative_per_million = NULL WHERE excess_mortality_cumulative_per_million = '';
-
-
+	
 
 -- Selecting the data that will be used and ordering it by location and date
 
