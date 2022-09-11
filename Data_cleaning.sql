@@ -149,7 +149,7 @@ WHERE row_num > 1;
 
 --------------------------------------------------------------------------------------------------------
 
--- Removing usused columns
+-- Removing unused columns
 
 ALTER TABLE PortfolioProject..Housing
 DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress;
