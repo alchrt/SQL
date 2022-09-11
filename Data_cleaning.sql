@@ -156,3 +156,5 @@ DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress;
 
 ALTER TABLE PortfolioProject..Housing
 DROP COLUMN SaleDate;
+
+
